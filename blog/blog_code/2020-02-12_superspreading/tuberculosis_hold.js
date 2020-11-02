@@ -1,6 +1,6 @@
 d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data=>{
 
-  var width = 700;
+  var width = 600;
   var height = window.innerHeight * 0.8;
   var start = 90;
   var end = 160;
