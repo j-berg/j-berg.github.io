@@ -1,4 +1,4 @@
-d3.json('../blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data=>{
+d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data=>{
 
   var width = window.innerWidth * 0.7;
   var height = window.innerHeight * 0.8;

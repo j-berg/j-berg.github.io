@@ -5,7 +5,7 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149845196-1"></script>
-<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -44,9 +44,6 @@
   <link rel="icon" href="favicon.png" />
   <!-- / -->
 
-  <!-- Custom CSS -->
-  <link href="static/css/network.css" rel="stylesheet">
-  <!-- / -->
 </head>
 
 <!-- Body Start -->
@@ -80,7 +77,6 @@
             <li><a class="nav-link active" href="#home-box">About</a></li>
             <li><a class="nav-link" href="#projects">Projects</a></li>
             <li><a class="nav-link" href="#portfolio">Research</a></li>
-            <li><a class="nav-link" href="#team">Team</a></li>
             <li><a class="nav-link" href="#blog">Blog</a></li>
             <li></li>
             <li></li>
@@ -767,27 +763,6 @@
      </section>
      <!--  Portfolio End  -->
 
-     <!-- Team Start -->
-     <section id="team" class="section gray-bg">
-        <div class="container">
-          <div class="row justify-content-center m-60px-b md-m-30px-b">
-            <div class="col-12 col-md-10 col-lg-7">
-              <div class="section-title text-center">
-                <h2 class="font-alt">Team</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row md-m-30px-b md-m-10px-r md-m-10px-l">
-
-            <div id="graph" align="center" style="top:30px;position:relative"></div>
-            <script src="static/js/network.js"></script>
-
-          <br>
-          </div> <!-- team row -->
-        </div> <!-- Container -->
-
-     </section>
-     <!--  Team End  -->
 
      <!-- Blog Start -->
      <section id="blog" class="section gray-bg">
@@ -837,18 +812,17 @@
 
                         <p>In order to interact with the graph, you can click a patient circle and drag to reposition the graph. To pan, click and drag the background. To zoom in and out, use the scroll wheel. To move through time, drag the ball on the timeline below the graph, or press play or pause. Red coloring of the patient circle indicates time of diagnosis. As you can see, there is a trend/correlation with SNP similarity and time of diagnosis. Also, the reference genome was excluded from the graph. Note: The two outlier strains, as identified in the original study, usually appear by themselves on the lower right corner of the graph, so you may need to pan over to view those samples.
                         </p>
+
+                        <link rel="stylesheet" href="blog/blog_code/2020-02-12_superspreading/tuberculosis_hold.css">
                         <div id="_border">
                           <div id="graph" align="center"></div>
                         </div>
                         <div id="play-button" align="center">Pause</div>
                         <div id="bar" align="center"><h2 style="font-family: sans-serif;">Time at Diagnosis (in months)</h2></div>
-
-                        <link rel="stylesheet" href="blog/blog_code/2020-02-12_superspreading/tuberculosis_hold.css">
                         <script src="blog/blog_code/2020-02-12_superspreading/tuberculosis_hold.js"></script>
 
                         <br>
                         <h3>References</h3>
-
                         1. Lee SL, et. al. Previously undetected super-spreading of <i>Mycobacterium tuberculosis</i> revealed by deep sequencing. (2020) <b><i>Elife.</i></b>
                         <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

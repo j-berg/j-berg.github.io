@@ -1669,7 +1669,7 @@ links.forEach(function(link) {
 });
 
 // Allow flexible window dimensions based on initial window size when opened
-var width = window.innerWidth ;
+var width = window.innerWidth;
 var height = window.innerHeight * 0.5;
 
 // Initialize force graph object
