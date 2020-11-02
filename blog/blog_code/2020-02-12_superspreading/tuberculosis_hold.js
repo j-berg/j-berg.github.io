@@ -8,13 +8,13 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
 
   var x = d3.scaleLinear()
       .domain([start, end])
-      .range([90, width])
+      .range([90, width - 100])
       .clamp(true);
 
   var slider = d3
     .select("#bar")
     .append("svg")
-      .attr("width", width)
+      .attr("width", width - 100)
       .attr("height", 50)
       .attr("overflow", "visible");
 
