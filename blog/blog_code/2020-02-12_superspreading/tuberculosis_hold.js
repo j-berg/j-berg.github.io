@@ -1,6 +1,6 @@
 d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data=>{
 
-  var width = 600;
+  var width = 700;
   var height = window.innerHeight * 0.8;
   var start = 90;
   var end = 160;
@@ -8,7 +8,7 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
 
   var x = d3.scaleLinear()
       .domain([start, end])
-      .range([90, width-200])
+      .range([90, width - 50])
       .clamp(true);
 
   var slider = d3
