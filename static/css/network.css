@@ -1,13 +1,13 @@
-
 .link {
-fill: none;
-stroke: #666;
-stroke-width: 1.5px;
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
 }
 
 #up {
   fill: green;
 }
+
 .link.up {
   stroke: green;
 }
@@ -15,6 +15,7 @@ stroke-width: 1.5px;
 #down {
   fill: red;
 }
+
 .link.down {
   stroke: red;
 }
@@ -22,14 +23,16 @@ stroke-width: 1.5px;
 #gene {
   fill: rgba(165, 55, 253, 1);
 }
+
 .link.gene {
   stroke: rgba(165, 55, 253, 1);
-  stroke-dasharray: 0,2 1;
+  stroke-dasharray: 0, 2 1;
 }
 
 #reaction {
   fill: black;
 }
+
 .link.reaction {
   stroke: black;
 }

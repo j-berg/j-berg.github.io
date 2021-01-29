@@ -1,4 +1,4 @@
-d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data=>{
+d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data => {
 
   var width = 675;
   var height = window.innerHeight * 0.8;
@@ -7,46 +7,56 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
   var timeTransition = 8000;
 
   var x = d3.scaleLinear()
-      .domain([start, end])
-      .range([90, width - 200])
-      .clamp(true);
+    .domain([start, end])
+    .range([90, width - 200])
+    .clamp(true);
 
   var slider = d3
     .select("#bar")
     .append("svg")
-      .attr("width", width - 200)
-      .attr("height", 50)
-      .attr("overflow", "visible");
+    .attr("width", width - 200)
+    .attr("height", 50)
+    .attr("overflow", "visible");
 
   slider.append("g")
     .attr("class", "slider")
     .attr("transform", "translate(" + 50 + "," + height / 2 + ")")
 
   slider.append("line")
-      .attr("class", "track")
-      .attr("x1", x.range()[0])
-      .attr("x2", x.range()[1])
-    .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
-      .attr("class", "track-inset")
-    .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
-      .attr("class", "track-overlay")
-      .call(d3.drag()
-          .on("start.interrupt", function() { slider.interrupt(); })
-          .on("start drag", function() { hue(x.invert(d3.event.x)); }));
+    .attr("class", "track")
+    .attr("x1", x.range()[0])
+    .attr("x2", x.range()[1])
+    .select(function() {
+      return this.parentNode.appendChild(this.cloneNode(true));
+    })
+    .attr("class", "track-inset")
+    .select(function() {
+      return this.parentNode.appendChild(this.cloneNode(true));
+    })
+    .attr("class", "track-overlay")
+    .call(d3.drag()
+      .on("start.interrupt", function() {
+        slider.interrupt();
+      })
+      .on("start drag", function() {
+        hue(x.invert(d3.event.x));
+      }));
 
   slider.insert("g", ".track-overlay")
-      .attr("class", "ticks")
-      .attr("transform", "translate(0," + 18 + ")")
+    .attr("class", "ticks")
+    .attr("transform", "translate(0," + 18 + ")")
     .selectAll("text")
     .data(x.ticks(10))
     .enter().append("text")
-      .attr("x", x)
-      .attr("text-anchor", "middle")
-      .text(function(d) { return d; });
+    .attr("x", x)
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+      return d;
+    });
 
   var handle = slider.insert("circle", ".track-overlay")
-      .attr("class", "handle")
-      .attr("r", 17);
+    .attr("class", "handle")
+    .attr("r", 17);
 
   var label = slider.append("text")
     .attr("class", "label")
@@ -54,11 +64,13 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
     .attr("transform", "translate(" + start + ",7)")
 
   slider.transition() // Gratuitous intro!
-      .duration(timeTransition)
-      .tween("hue", function() {
-        var i = d3.interpolate(start, end);
-        return function(t) { hue(i(t)); };
-      });
+    .duration(timeTransition)
+    .tween("hue", function() {
+      var i = d3.interpolate(start, end);
+      return function(t) {
+        hue(i(t));
+      };
+    });
 
   var playButton = d3.select("#play-button");
 
@@ -68,11 +80,11 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
   var svg = d3
     .select("#graph")
     .append("svg")
-      .attr("width", width * .99)
-      .attr("height", height - 160)
-    .call(d3.zoom().on("zoom", function () {
+    .attr("width", width * .99)
+    .attr("height", height - 160)
+    .call(d3.zoom().on("zoom", function() {
       svg.attr("transform", d3.event.transform)
-      }))
+    }))
     .on("dblclick.zoom", null)
     .append("g");
 
@@ -94,47 +106,51 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
   simulation.alphaTarget(0.01).alphaMin(0.1).velocityDecay(0.70)
 
   svg.append("defs").selectAll("marker")
-  .data(["end"])
+    .data(["end"])
     .enter()
     .append("marker")
-      .attr("id", function(d) { return d; })
-      .attr("viewBox", "0 -5 10 10")
-      .attr("refX", 15.7)
-      .attr("refY", -0.18)
-      .attr("markerWidth", 8)
-      .attr("markerHeight", 12)
-      .attr("orient", "auto")
+    .attr("id", function(d) {
+      return d;
+    })
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 15.7)
+    .attr("refY", -0.18)
+    .attr("markerWidth", 8)
+    .attr("markerHeight", 12)
+    .attr("orient", "auto")
     .append("path")
-      .attr("d", "M0, -5L10, 0L0, 5");
+    .attr("d", "M0, -5L10, 0L0, 5");
 
   var link = svg.append("g").selectAll("path")
-      .data(links)
+    .data(links)
     .enter().append("path")
-      .attr("class", "link")
-      .attr("marker-end", function(d) { return "url(#end)"; });
+    .attr("class", "link")
+    .attr("marker-end", function(d) {
+      return "url(#end)";
+    });
 
   var node = svg.selectAll(".node")
     .data(nodes)
     .enter().append("g")
-      .attr("class", "node")
+    .attr("class", "node")
     .call(d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended));
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended));
 
   var circle = node
     .append("circle")
-      .attr("r", 6)
+    .attr("r", 6)
 
   var text = node
     .append("text")
-      .html(d => "<tspan dx='16' y='0.31em' style='font-weight: bold;'>" + d.id + "</tspan>");
+    .html(d => "<tspan dx='16' y='0.31em' style='font-weight: bold;'>" + d.id + "</tspan>");
 
   simulation.on("tick", tick);
 
   var cell = node
     .append("path")
-      .attr("class", "cell");
+    .attr("class", "cell");
 
   // Draw curved edges
   function tick() {
@@ -147,8 +163,8 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
 
   function linkArc(d) {
     var dx = d.target.x - d.source.x,
-        dy = d.target.y - d.source.y,
-        dr = Math.sqrt(dx * dx + dy * dy);
+      dy = d.target.y - d.source.y,
+      dr = Math.sqrt(dx * dx + dy * dy);
     return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
   }
 
@@ -179,11 +195,13 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
     if (button.text() == "Pause") {
 
       slider.transition() // Gratuitous intro!
-          .duration(0)
-          .tween("hue", function() {
-            var i = d3.interpolate(x.invert(handle.attr("cx")), x.invert(handle.attr("cx")));
-            return function(t) { hue(i(t)); };
-          });
+        .duration(0)
+        .tween("hue", function() {
+          var i = d3.interpolate(x.invert(handle.attr("cx")), x.invert(handle.attr("cx")));
+          return function(t) {
+            hue(i(t));
+          };
+        });
 
       button.text("Play");
 
@@ -197,11 +215,13 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
       }
 
       slider.transition() // Gratuitous intro!
-          .duration(timeTransition - (1000 * end / x.invert(handle.attr("cx"))))
-          .tween("hue", function() {
-            var i = d3.interpolate(starter, end);
-            return function(t) { hue(i(t)); };
-          });
+        .duration(timeTransition - (1000 * end / x.invert(handle.attr("cx"))))
+        .tween("hue", function() {
+          var i = d3.interpolate(starter, end);
+          return function(t) {
+            hue(i(t));
+          };
+        });
 
       button.text("Pause");
     }
@@ -219,25 +239,25 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
 
     node.each(function(d) {
 
-        if (d.time < h) {
-            d3.select(this)
-              .select("circle")
-              .style("fill", "rgba(214, 69, 65, 1)")
-              .style("stroke", "black")
-        } else {
-          d3.select(this)
-            .select("circle")
-            .style("fill", "white")
-            .style("stroke", "black")
-        }
-
-      })
-
-      // If slide takes it to the end, reset button
-      if (h > end - 0.01) {
-
-        d3.select("#play-button").text("Play");
+      if (d.time < h) {
+        d3.select(this)
+          .select("circle")
+          .style("fill", "rgba(214, 69, 65, 1)")
+          .style("stroke", "black")
+      } else {
+        d3.select(this)
+          .select("circle")
+          .style("fill", "white")
+          .style("stroke", "black")
       }
+
+    })
+
+    // If slide takes it to the end, reset button
+    if (h > end - 0.01) {
+
+      d3.select("#play-button").text("Play");
     }
+  }
 
 })
