@@ -220,6 +220,7 @@ Table of contents
 /*---------------------------------
 * 02. Common
 -----------------------------------*/
+
 body {
   -webkit-font-smoothing: antialiased;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -348,8 +349,8 @@ a:hover {
 -----------------------------------*/
 .section-title h2 {
 	margin: 0;
-  padding: 0 0 20px;
-  font-weight: 600;
+  padding: 40px 0 20px;
+  font-weight: 650;
   font-size: 35px;
   display: inline-block;
   z-index: 1;
@@ -394,9 +395,9 @@ a.m-btn {
 }
 
 .m-btn:hover {
+  color: #fff !important;
   background: linear-gradient(to right, #B1040E, #8c1515) !important;
   box-shadow: 0px 8px 15px rgba(177, 4, 13, 0.616);
-  color: #fff;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
@@ -583,6 +584,7 @@ a.m-btn {
 .header-nav .navbar-nav > li {
 	margin: 0 0 0 20px;
 }
+
 .header-nav .navbar-nav .nav-link {
   position: relative;
   padding: 0;
@@ -590,7 +592,7 @@ a.m-btn {
   font-size: 12px;
   vertical-align: top;
   color: #ececec;
-  font-weight: 300;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.215em;
 }
@@ -675,7 +677,7 @@ a.m-btn {
 
 .header-nav-white .navbar-nav .nav-link {
   color: #333;
-  font-weight: 600;
+  font-weight: 800;
 }
 .header-nav-white .navbar-nav .nav-link:after {
   background: #B1040E;
@@ -701,6 +703,19 @@ a.m-btn {
   min-height: 100vh;
 }
 
+.half-screen {
+  min-height: 50vh;
+}
+
+.home-about {
+  color: white;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 15%;
+  z-index: 1;
+  height: 70vh;
+}
+
 .home-banner {
   position: relative;
   background-repeat: no-repeat;
@@ -710,6 +725,7 @@ a.m-btn {
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
+
 }
 
 .home-banner .particles-js-canvas-el {
@@ -1037,7 +1053,6 @@ a.m-btn {
     font-size: 18px;
     /* font-weight: 600; */
     color: #333;
-    margin: 0 0 25px;
 }
 
 .about-left p {
@@ -1469,6 +1484,25 @@ section#portfolio {
   bottom: 20px;
 }
 
+.my-flex-item-member {
+  height: 100px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+}
+
+.my-flex-item-fund {
+  height: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+}
+
+.my-flex-item-utah {
+  width: 40vw;
+  background-color: transparent;
+}
+
 
 .my-flex-item-photo {
   height: 60px;
@@ -1809,7 +1843,8 @@ blockquote.blockquote-left .parson { font-weight: 600; }
 * 14. Page Title
 -----------------------------------*/
 .page-title {
-  padding: 180px 0 80px;
+  margin-top: 500px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -1938,9 +1973,10 @@ blockquote.blockquote-left .parson { font-weight: 600; }
 
 .footer {
   background: #111;
-
-  padding: 100px 0 50px;
+  padding: 40px 0 40px;
+  padding-bottom: 160px;
   text-align: center;
+  position: relative;
 }
 .footer-blog {
 	margin-top: 0;
