@@ -58,7 +58,7 @@ Table of contents
 
 .icon-span {
 
-  height: 60vh;
+  height: 80vh;
 }
 
 
@@ -706,11 +706,11 @@ a.m-btn {
 * 06. Home Banner
 -----------------------------------*/
 .full-screen {
-  -webkit-transform: scale(0.75); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.75); /* FF3.5+ */
-      -ms-transform: scale(0.75); /* IE9 */
-       -o-transform: scale(0.75); /* Opera 10.5+ */
-          transform: scale(0.75);
+  -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.5); /* FF3.5+ */
+      -ms-transform: scale(0.5); /* IE9 */
+       -o-transform: scale(0.5); /* Opera 10.5+ */
+          transform: scale(0.5);
   min-height: 100vh;
 }
 
