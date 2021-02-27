@@ -50,11 +50,17 @@ Table of contents
 
 .icon-bar {
   position: fixed;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 70%;
+  -webkit-transform: translateY(-70%);
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
 }
+
+.icon-span {
+
+  height: 60vh;
+}
+
 
 .icon-bar a {
   display: block;
