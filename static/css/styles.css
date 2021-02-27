@@ -700,6 +700,11 @@ a.m-btn {
 * 06. Home Banner
 -----------------------------------*/
 .full-screen {
+  -webkit-transform: scale(0.75); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.75); /* FF3.5+ */
+      -ms-transform: scale(0.75); /* IE9 */
+       -o-transform: scale(0.75); /* Opera 10.5+ */
+          transform: scale(0.75);
   min-height: 100vh;
 }
 
