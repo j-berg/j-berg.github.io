@@ -113,16 +113,16 @@
         </div>
         <div class="row md-m-30px-b md-m-10px-r md-m-10px-l">
 
-          <!-- BLOG 0 START -->
-          <div id="blog-0" class="col-12 m-60px-b md-m-30px-b">
+          <!-- BLOG 2 START -->
+          <div id="blog-2" class="col-12 m-60px-b md-m-30px-b">
 
-            <a href="" class="p-btn" data-toggle="modal" data-target=".blog-0-modal">
+            <a href="" class="p-btn" data-toggle="modal" data-target=".blog-2-modal">
               <h4>Interactive Article Exploration: "Previously undetected super-spreading of <i>Mycobacterium tuberculosis</i> revealed by deep sequencing</h4>
             </a>
             <p>A re-visualization of infection spread in a tuberculosis community outbreak.</p>
 
-            <!-- blog-0-modal start  -->
-            <div class="modal fade blog-0-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <!-- blog-2-modal start  -->
+            <div class="modal fade blog-2-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -199,10 +199,250 @@
                 </div>
               </div>
             </div>
+            <!-- project-2-modal end -->
+          </div>
+          <!-- PROJECT 2 END -->
+          <br>
+
+
+          <!-- BLOG 1 START -->
+          <div id="blog-1" class="col-12 m-60px-b md-m-30px-b">
+
+            <a href="" class="p-btn" data-toggle="modal" data-target=".blog-1-modal">
+              <h4>Introducing: XPRESSyourself -- an automated pipeline for ribosome profiling analysis</h4>
+            </a>
+            <p>A discussion of the software package XPRESSyourself, which introduces new tools for ribosome profiling and acts as a reference pipeline for ribosome profiling data analysis.</p>
+
+            <!-- blog-0-modal start  -->
+            <div class="modal fade blog-1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <span class="post-meta"><b>19 Jan 2020</b>
+                      <h4 class="modal-title" id="exampleModalScrollableTitle">Introducing: XPRESSyourself -- an automated pipeline for ribosome profiling analysis</h4>
+
+                  </div>
+                  <div class="modal-body">
+                    <p>* Find the software <a href="https://github.com/XPRESSyourself" target="_blank">here</a>.</p>
+                    <p>* Find the publication <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007625" target="_blank">here</a> [1].</p>
+
+                    <p>When I began graduate school at the University of Utah, and began considering working in the <a href="http://rutter.biochem.utah.edu/" target="_blank">Rutter lab</a>, <a href="https://twitter.com/RutterLab" target="_blank">Jared</a> proposed a project to me which I found fascinating. He was interested in looking at protein translation using ribosome profilng [2], but in the context of metabolism of interest to the Rutter lab. I was hooked by the idea as it would allow a nice blend of wet lab and dry lab work. However, as I began exploring the data, I quickly found that the analysis side of things still had a lot of room for development, and there was no consensus dry methodology, and I realized that everyone designing their own scripts for processing these data could be problematic as much as it was inefficient. Additionally, key steps of data processing were missing from the open source community. Soon enough, I began thinking of ways I could help solve these issues and began work on <a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a>.</p>
+
+                    <br>
+                    <h3>What does XPRESSyourself do?</h3>
+
+                    <p><a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a>'s goals are three-fold:</p>
+                    <p>
+                      1) Act as a reference implementation of ribosome profiling data analysis.
+                      <br>
+                      2) Provide automated tools missing from the ribosome profiling toolkit.
+                      <br>
+                      3) Where tools exist, help automate the tasks into a well-integrated pipeline.
+                    </p>
+                    <p><a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a> is designed to require minimal inputs from the user and guide the user through the proper set-up of experimental variables to pass into the packages XPRESSyourself utilizes. XPRESSyourself is split into two packages: <a href="https://xpresspipe.readthedocs.io/en/latest/" target="_blank">XPRESSpipe</a> and <a href="https://xpressplot.readthedocs.io/en/latest/" target="_blank">XPRESSplot</a>. The former handles the processing and quality control of the raw FASTQ sequence files, and the latter handles normalization and analysis of the processed data. While the input requirements are detailed in the documentation and help menus, we tried to make this tool as approachable as possible. Therefore, we designed a sort of "choose your own adventure" style command builder (shown below) to walk the user through every consideration they would need to make for running <a href="https://xpresspipe.readthedocs.io/en/latest/" target="_blank">XPRESSpipe</a>, and <a href="https://github.com/XPRESSyourself/XPRESSplot/blob/master/example_notebook.ipynb" target="_blank">Jupyter Notebook</a> for example analyses for <a href="https://xpressplot.readthedocs.io/en/latest/" target="_blank">XPRESSplot</a>. By centralizing and automating the code needed to process this specialized data type, hopefully, reproducibility will increase and we will be able to extract the maximum amount of data from these labor-intensive and expensive experiments.
+                    </p>
+
+                    <p><img src="https://j-berg.github.io/blog/blog_code/2020-01-19_XPRESSyourself/xpresspipe_build.png" style="padding-left:6vw;position:relative;border-radius: 0px;max-height: 500px;"/></p>
+                    <p align="center"><i>View of the XPRESSpipe command builder.</i></p>
+
+                    <br>
+                    <h3>Adding to the toolkit</h3>
+
+                    <p>As mentioned earlier, when I began analyzing my own ribosome profiling data, I began to discover some key tools were missing from the toolkit. The most glaring vacancy in the toolkit centered around removing ribosome profiling-specific biases from the data. As the kinetics of translation initiation and termination are much slower than elongation dynamics [3], which is frequently the of most common interest to users of this technology, initation and termination can often provide a more murky picture of translation dynamics. This effect is further exacerbated by the use of cycloheximide during ribosome footprint harvesting. It is therefore recommended to disregard the first 45 nt and last 15 nt of each transcript, which are suspect to these kinetic consequences [4]. However, no open source tools exist for handling this problem. We decided to handle this issue during quantification of reads using a modified GTF reference file. However, as many transcripts in these records contain short exon 1 sections, often removing the first exon alone is not enough, and uneven truncation can have problematic consequences on quantification between transcripts (see image below). Therefore, we handle this truncation recursively.
+                    </p>
+
+                    <p><img src="https://j-berg.github.io/blog/blog_code/2020-01-19_XPRESSyourself/truncation_cartoon.png" style="padding-left:17vw;position:relative;border-radius: 0px;max-height: 400px;"/></p>
+                    <p align="center"><i>The consequences of improper trimming.</i></p>
+
+                    <p>Other features act to thread together steps of quality control that previously were not fully automated. Metagene read density, intron-specific gene-specific read coverage, read periodicity, and codon distributions are processed for each sample and a publication quality summary PDF is output so the user can quickly view and compare all samples to assess the quality of their ribosome profiling libraries.
+                    </p>
+
+                    <p>We designed XPRESSyourself to be as flexible as possible. Therefore, in addition to being able to processing ribosome profiling data (and its paired RNA-seq data for translation efficiency calculations), we have used it to analyze single-end RNA-seq, paired-end RNA-seq (we show an example in the supplement where we processed TCGA data), and more sequencing platforms. We have also used XPRESSplot to analyze even proteomics data.
+                    </p>
+
+                    <br>
+                    <h3>Conclusions</h3>
+                    <p>Certainly this is only meant to be a quick overview of the capabilities of <a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a>. If you are interested in learning more about all the capabilities XPRESSyourself has to offer, I would suggest starting with the <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007625" target="_blank">paper</a> and then explore of the <a href="https://github.com/XPRESSyourself" target="_blank">documentation</a> if the tool looks useful to you. If you run into any challenges while using the software, feel free to reach out to me by submitting an <a href="https://github.com/XPRESSyourself/XPRESSpipe/issues" target="_blank">issue</a> on Github. I hope you find this tool useful! Happy analyzing!
+                    </p>
+
+                    <br>
+                    <h3>References</h3>
+
+                    1. Berg JA, Belyeu JR, Morgan JT, Ouyang Y, Bott AJ, Quinlan AR, Gertz J, Rutter J. <i>XPRESSyourself</i>: Enhancing, Standardizing, and Automating Ribosome Profiling Computational Analyses Yields Improved Insight into Data. (2020) <b><i>PLoS Comp. Biol.</i></b>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <font size="2">
+                      <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007625" target="_blank"><i>Publication</i></a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </font>
+                    <br>
+                    <br>
+                    2. Ingolia NT, Ghaemmaghami S, Newman JR, Weissman JS. Genome-wide analysis in vivo of translation with nucleotide resolution using ribosome profiling. (2009) Science, 324(5924), 218–223. <a href="https://science.sciencemag.org/content/324/5924/218" target="_blank">doi:10.1126/science.1168978</a>
+                    <br>
+                    <br>
+                    3. Stein KC, Frydman J. The stop-and-go traffic regulating protein biogenesis: How translation kinetics controls proteostasis. (2019) The Journal of biological chemistry, 294(6), 2076–2084. <a href="http://www.jbc.org/content/294/6/2076" target="_blank">doi:10.1074/jbc.REV118.002814</a>
+                    <br>
+                    <br>
+                    4. McGlincy NJ, Ingolia NT. Transcriptome-wide measurement of translation by ribosome profiling. (2017) Methods, 126, 112–129. <a href="https://www.sciencedirect.com/science/article/pii/S1046202316303292" target="_blank">doi:10.1016/j.ymeth.2017.05.028</a>
+                    </div>
+
+                    <br>
+                    <br>
+
+
+                    <div class="modal-footer d-flex justify-content-between">
+                      <button type="button" class="btn" data-dismiss="modal">Close</button>
+                      <div align="right">
+                        <a href="https://github.com/j-berg/j-berg.github.io/tree/master/blog/blog_code/2020-01-19_XPRESSyourself" target="_blank" class="m-btn">Code</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- project-1-modal end -->
+          </div>
+          <!-- PROJECT 1 END -->
+          <br>
+
+
+          <!-- BLOG 0 START -->
+          <div id="blog-0" class="col-12 m-60px-b md-m-30px-b">
+
+            <a href="" class="p-btn" data-toggle="modal" data-target=".blog-0-modal">
+              <h4>Understanding scaling in heatmaps</h4>
+            </a>
+            <p>A brief summary of the utility of plotting heatmaps using z-scored gene expression values in pattern identification.</p>
+
+            <!-- blog-0-modal start  -->
+            <div class="modal fade blog-0-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <span class="post-meta"><b>09 Apr 2019</b>
+                      <h4 class="modal-title" id="exampleModalScrollableTitle">Understanding scaling in heatmaps</h4>
+
+                  </div>
+                  <div class="modal-body">
+                    <p>Heatmaps are an effective method for representing large swaths of data at once and uncovering underlying patterns within the data. Probably the most common use in biology is within high-throughput genomics experiments, such as RNA-seq. In RNA-seq experiments, one may want to uncover molecular patterns characteristic of a particular biological background, or track changes in gene expression across time. Whenever I make a heatmap, I always get the same question: <b><u>Why are you using Z-scores for the gene expression data? Why not use fold changes?</u></b> This blog post is intended as a blog post to summarize my answers to some common questions. I will be using examples relevant to RNA-seq, but the principles are applicable to other data types.</p>
+
+                    <p>In the following examples, I will be borrowing heavily from a fantastic blog post by BIOMICKWATSON, titled <a href="http://www.opiniomics.org/you-probably-dont-understand-heatmaps/" target="_blank">"You probably don't understand heatmaps"</a>. The purpose of my blog post is not to steal the thunder of BIOMICKWATSON, but rather to offer a summary of questions I have encountered and an easy place to access this information (rather than me trying to explain myself over and over again).</p>
+
+                    <br>
+                    <h3>Why Z-score?</h3>
+
+                    <p>Z-scoring (or standard scoring) of data essentially boils down to going gene by, calculating the mean of the the values across all samples for the gene, then determining how many standard deviations the actual value is from the mean. This is also commonly referred to as "mean centering." This is done using the following formula:</p>
+
+                    $$ {z = (x – μ) / σ} $$
+
+                    <p>Let's break this down a little:
+                    <br>
+                    - x: A given gene expression measurement (ex: 40)<br>
+                    - μ: The mean of gene expression values across samples for a given gene (ex: 25)<br>
+                    - σ: The standard deviation across samples for a given gene (ex: 5)<br>
+                    - z: The outcoming z-score for each gene expression measurement</p>
+
+                    <p>So in this example, the output z-score for this particular gene in this sample would be:</p>
+
+                    $$ {3 = (40 – 25) / 5} $$
+
+                    <p>So this gene having a z = 3 means its expression is 3 standard deviations above the mean. Pretty impressive, right?</p>
+
+                    <center>
+                      <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_Normal_Distribution.svg/1920px-The_Normal_Distribution.svg.png" style="position:relative;border-radius: 0px;"/></p>
+                    </center>
+                    <p align="center"><i>Scoring values along a normal distribution. Source: Wikipedia</i></p>
+
+                    <br>
+                    <h3>But Z-scores make no sense! Why not log<sub>2</sub>(fold change)?</h3>
+
+                    <p>I get this response a lot, and I get it, Z-scoring gene expression may not be super intuitive. And I will admit, while Z-scores give you significance and direction, using solely Z-score misses an important piece of information: magnitude. But to plot a heatmap using using log<sub>2</sub>(fold change) also misses significance!</p>
+
+                    <p>In cases where magnitude of change is important, I recommend people use a volcano plot to visualize their data. This captures magnitude, direction, and statistical significance, but will lose information like population variability (maybe have your experimental samples have one signature and the other half have another). You also cannot plot expression over a time course. But let's talk more about why Z-scores should be used in heatmaps, that's why we're here after all!</p>
+
+                    <br>
+                    <h3>Z-scores make each gene comparable to another</h3>
+
+                    <p>Let's consider the following example from the aforementioned <a href="http://www.opiniomics.org/you-probably-dont-understand-heatmaps/" target="_blank">blog</a>.</p>
+
+                    <p>In this first example, we have two gene expression patterns before any kind of gene normalization has been applied:</p>
+
+                    <center>
+                      <p><img src="http://www.opiniomics.org/wp-content/uploads/2015/03/gex.png" style="position:relative;border-radius: 0px;padding-top: 50px;"/></p>
+                    </center>
+                    <p align="center"><i>Source: BIOMICKWATSON</i></p>
+
+                    <p><b>h1</b> and <b>l1</b> both follow the sample gene expression pattern. They appear to be under the same or similar regulation. Therefore, when performing unbiased clustering of these signatures, we would expect <b>h1</b> and <b>l1</b> to cluster together and <b>h2</b> and <b>l1</b> to cluster together. But let's look at the clustering outcome:</p>
+
+                    <center>
+                      <p><img src="http://www.opiniomics.org/wp-content/uploads/2015/03/hclust.png" style="position:relative;border-radius: 0px;"/></p>
+                    </center>
+                    <p align="center"><i>Source: BIOMICKWATSON</i></p>
+
+                    <p>This result is a bit unexpected. Why did this happen? These patterns that should have emerged were hidden by the different magnitudes of expression, and so the clustering algorithm thought <b>h1</b> and <b>h2</b> shared a profile. This might lead researchers to make false conclusions concerning their data. Maybe based on this they determine <b>h1</b> and <b>h2</b> are in a pathway related to their disease and design drugs to target these two genes, when really the actually pathway involved <b>h1</b> and <b>h2</b> and they should have designed a different drug or one drug may have targeted both genes in a shared pathway and billions of dollars of R&D money was wasted instead.</p>
+
+                    <p>Here is how the clustering should look when the data have been scaled:</p>
+                    <center>
+                      <p><img src="http://www.opiniomics.org/wp-content/uploads/2015/03/hclust_corr.png" style="position:relative;border-radius: 0px;"/></p>
+                    </center>
+                    <p align="center"><i>Source: BIOMICKWATSON</i></p>
+
+                    <br>
+                    <h3>I don't care about clustering genes. Why should I still use Z-scores?</h3>
+
+                    <p>Z-scores avoid swamping out patterns in the data. Let's take the following case for example:</p>
+
+                    <center>
+                      <p><img src="https://j-berg.github.io/blog/blog_code/2019-04-09_heatmaps/heatmap_scaled_example.png" style="position:relative; border-radius: 0px;"/></p>
+                    </center>
+
+                    <p>In the first case, everything looks pretty good. It seems like all gene expression levels decrease between wild-type and experimental cases, and this is easy to see when the data has been normalized in this manner. But let's look at the same exact dataset, but without normalization. One might say only GENE1 is really seeing any changes in gene expression, but nothing else is really going on.</p>
+
+                    <center>
+                      <p><img src="https://j-berg.github.io/blog/blog_code/2019-04-09_heatmaps/heatmap_unscaled_example.png" style="position:relative;border-radius: 0px;"/></p>
+                    </center>
+
+                    <p>When scaling has been applied, one can observe that all these genes appear to be under similar transcriptional control and interesting biology can be uncovered that would otherwise appear to be hidden.</p>
+
+                    <p>To look at the code I used to create the last two figures, please refer <a href="https://github.com/j-berg/j-berg.github.io/tree/master/blog_code/2019-04-09_heatmaps" target="_blank">here</a>.</p>
+
+                    <br>
+                    <h3>References</h3>
+
+                    1. BIOMICKWATSON. You probably don't understand heatmaps. http://www.opiniomics.org/you-probably-dont-understand-heatmaps/. Accessed: 2019-04-19.
+                    <br><br>
+                    2. Statistics How To. Z-Score: Definition, Formula and Calculation.  https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/z-score/#zscoreformulas. Accessed: 2019-04-19.
+                    <br><br>
+                    3. Wikipedia. Standard Score. https://en.wikipedia.org/wiki/Standard_score. Accessed: 2019-04-19.
+
+
+                    <br>
+                    <br>
+
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- project-0-modal end -->
           </div>
-          <!-- PROJECT 0 END -->
+          <!-- BLOG 0 END -->
           <br>
+
+
+
+
         </div> <!-- blog row -->
       </div> <!-- Container -->
       <br>
