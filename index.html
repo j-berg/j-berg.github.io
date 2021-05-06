@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-  body {
-    background: url("static/img/network.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-</style>
-
-
 <head>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -52,6 +41,7 @@
 
   <!-- Theme Style -->
   <link href="static/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="static/css/particles.css">
   <link href="static/css/color/color-7.css" rel="stylesheet" id="color_theme">
   <!-- / -->
 
@@ -70,6 +60,8 @@
     <div class="load-circle"><span class="one"></span></div>
   </div>
   <!-- / -->
+
+
 
   <!-- Header -->
   <header>
@@ -108,14 +100,15 @@
   </header>
   <!-- Header End -->
 
-  <!-- Main Start -->
-  <main>
 
+    <!-- Main Start -->
+    <main>
+      <div id="particles-js">
 
-    <!-- Home Banner Start -->
-    <section id="home-box" class="home-banner-04">
-      <div class="container-fluid">
-        <div class="row align-items-center justify-content-center">
+      <!-- Home Banner Start -->
+      <section id="home-box" class="home-banner-04">
+        <div class="container-fluid">
+
           <h3 class="home-about icon-bar">
             <center>
             We develop network-aware models and computational tools to deconvolute complex patterns within metabolic data. In doing so, we seek to bring new systematic perspectives to metabolism research that provide insights into complex metabolic systems and their regulation.
@@ -124,12 +117,15 @@
           <div class="icon-span">
           </div>
           <br>
-        </div>
-      </div><!-- container -->
-    </section>
 
-  </main>
-  <!-- Main End -->
+        </div><!-- container -->
+      </section>
+  </div>
+    </main>
+    <!-- Main End -->
+
+
+  <!-- Particles End -->
 
   <!-- Footer-->
   <footer class="footer">
@@ -161,6 +157,9 @@
   <!-- custom -->
   <script src="static/js/custom.js"></script>
   <script src="static/js/mail_send.js"></script>
+
+  <script src="static/js/particles.js"></script>
+  <script src="static/js/particles-app.js"></script>
 
 </body>
 <!-- Body End -->

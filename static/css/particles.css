@@ -1,0 +1,31 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #03041b;
+  background-image: url('../img/pexels-drift-shutterbug-2085998.jpg');
+	z-index: 1;
+  background-size: cover;
+  background-position: 20% -50%;
+  background-repeat: no-repeat;
+	position: relative;
+}
