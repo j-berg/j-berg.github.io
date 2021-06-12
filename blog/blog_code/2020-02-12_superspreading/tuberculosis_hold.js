@@ -1,4 +1,7 @@
-d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').then(data => {
+var local_path = "blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json";
+var online_path = "https://raw.githubusercontent.com/j-berg/j-berg.github.io/main/blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json"
+
+d3.json(online_path).then(data => {
 
   var width = 675;
   var height = window.innerHeight * 0.8;
@@ -11,86 +14,19 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
     .range([90, width - 200])
     .clamp(true);
 
-  var slider = d3
-    .select("#bar")
-    .append("svg")
-    .attr("width", width - 200)
-    .attr("height", 50)
-    .attr("overflow", "visible");
-
-  slider.append("g")
-    .attr("class", "slider")
-    .attr("transform", "translate(" + 50 + "," + height / 2 + ")")
-
-  slider.append("line")
-    .attr("class", "track")
-    .attr("x1", x.range()[0])
-    .attr("x2", x.range()[1])
-    .select(function() {
-      return this.parentNode.appendChild(this.cloneNode(true));
-    })
-    .attr("class", "track-inset")
-    .select(function() {
-      return this.parentNode.appendChild(this.cloneNode(true));
-    })
-    .attr("class", "track-overlay")
-    .call(d3.drag()
-      .on("start.interrupt", function() {
-        slider.interrupt();
-      })
-      .on("start drag", function() {
-        hue(x.invert(d3.event.x));
-      }));
-
-  slider.insert("g", ".track-overlay")
-    .attr("class", "ticks")
-    .attr("transform", "translate(0," + 18 + ")")
-    .selectAll("text")
-    .data(x.ticks(10))
-    .enter().append("text")
-    .attr("x", x)
-    .attr("text-anchor", "middle")
-    .text(function(d) {
-      return d;
-    });
-
-  var handle = slider.insert("circle", ".track-overlay")
-    .attr("class", "handle")
-    .attr("r", 17);
-
-  var label = slider.append("text")
-    .attr("class", "label")
-    .text(start)
-    .attr("transform", "translate(" + start + ",7)")
-
-  slider.transition() // Gratuitous intro!
-    .duration(timeTransition)
-    .tween("hue", function() {
-      var i = d3.interpolate(start, end);
-      return function(t) {
-        hue(i(t));
-      };
-    });
-
-  var playButton = d3.select("#play-button");
-
   const links = data.links;
   const nodes = data.nodes;
 
   var svg = d3
     .select("#graph")
     .append("svg")
-    .attr("width", width * .99)
+    .attr("width", width * .99 + 30)
     .attr("height", height - 160)
     .call(d3.zoom().on("zoom", function() {
       svg.attr("transform", d3.event.transform)
     }))
     .on("dblclick.zoom", null)
     .append("g");
-
-
-
-
 
   const forceX = d3.forceX(width / 2).strength(0.015)
   const forceY = d3.forceY(height / 2).strength(0.015)
@@ -152,6 +88,72 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
     .append("path")
     .attr("class", "cell");
 
+  // Add slider bar
+  var slider = d3
+    .select("#bar")
+    .append("svg")
+    .attr("width", width - 200)
+    .attr("height", 50)
+    .attr("overflow", "visible")
+    .style("margin-top", "15px")
+    .style("margin-left", "45px");
+
+  slider.append("g")
+    .attr("class", "slider")
+    .attr("transform", "translate(" + 50 + "," + height / 2 + ")")
+
+  slider.append("line")
+    .attr("class", "track")
+    .attr("x1", x.range()[0])
+    .attr("x2", x.range()[1])
+    .select(function() {
+      return this.parentNode.appendChild(this.cloneNode(true));
+    })
+    .attr("class", "track-inset")
+    .select(function() {
+      return this.parentNode.appendChild(this.cloneNode(true));
+    })
+    .attr("class", "track-overlay")
+    .call(d3.drag()
+      .on("start.interrupt", function() {
+        slider.interrupt();
+      })
+      .on("start drag", function() {
+        hue(x.invert(d3.event.x));
+      }));
+
+  slider.insert("g", ".track-overlay")
+    .attr("class", "ticks")
+    .attr("transform", "translate(0," + 18 + ")")
+    .selectAll("text")
+    .data(x.ticks(10))
+    .enter().append("text")
+    .attr("x", x)
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+      return d;
+    });
+
+  var handle = slider.insert("circle", ".track-overlay")
+    .attr("class", "handle")
+    .attr("r", 17);
+
+  var label = slider.append("text")
+    .attr("class", "label")
+    .text(start)
+    .attr("transform", "translate(" + start + ",7)")
+
+  slider.transition() // Gratuitous intro!
+    .duration(timeTransition)
+    .tween("hue", function() {
+      var i = d3.interpolate(start, end);
+      return function(t) {
+        hue(i(t));
+      };
+    });
+
+  var playButton = d3.select("#play-button");
+
   // Draw curved edges
   function tick() {
 
@@ -188,7 +190,6 @@ d3.json('blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json').th
     d3.event.subject.fx = null;
     d3.event.subject.fy = null;
   }
-
 
   playButton.on("click", function() {
     var button = d3.select(this);
