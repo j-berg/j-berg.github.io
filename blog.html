@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <!-- jQuery -->
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="static/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="static/plugin/isotope/isotope.pkgd.min.js"></script>
+  <script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+
+  <!-- custom -->
+  <script src="static/js/custom.js"></script>
+  <script src="static/js/mail_send.js"></script>
 <head>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -126,7 +140,7 @@
             <p>(14 Jun 2021) My tips and tricks for the F99/K00 fellowship (whatever they're worth).</p>
 
             <!-- blog-3-modal start  -->
-            <div class="modal fade blog-3-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div id="getting-an-f99-k00-fellowship" class="modal fade blog-3-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -377,7 +391,7 @@
             <p>(14 Feb 2020) A re-visualization of infection spread in a tuberculosis community outbreak.</p>
 
             <!-- blog-2-modal start  -->
-            <div class="modal fade blog-2-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div id="superspreader-analysis" class="modal fade blog-2-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -469,7 +483,7 @@
             <p>(19 Jan 2020) A discussion of the software package XPRESSyourself, which introduces new tools for ribosome profiling and acts as a reference pipeline for ribosome profiling data analysis.</p>
 
             <!-- blog-0-modal start  -->
-            <div class="modal fade blog-1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div id="xpressyourself-announcement" class="modal fade blog-1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -578,7 +592,7 @@
             <p>(09 Apr 2019) A brief summary of the utility of plotting heatmaps using z-scored gene expression values in pattern identification.</p>
 
             <!-- blog-0-modal start  -->
-            <div class="modal fade blog-0-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div id="heatmaps-explainer" class="modal fade blog-0-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -745,26 +759,26 @@
     </div>
   </footer>
 
-  <!-- jQuery -->
-  <script src="static/js/jquery-3.2.1.min.js"></script>
-  <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
-
-  <!-- Plugins -->
-  <script src="static/plugin/bootstrap/js/popper.min.js"></script>
-  <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
-  <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
-  <script src="static/plugin/isotope/isotope.pkgd.min.js"></script>
-  <script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
-
-  <!-- custom -->
-  <script src="static/js/custom.js"></script>
-  <script src="static/js/mail_send.js"></script>
-
-
-
-
 
 </body>
 <!-- Body End -->
+
+<script>
+  $(document).ready(function() {
+    console.log(window.location.href)
+    if(window.location.href.indexOf('#getting-an-f99-k00-fellowship') != -1) {
+      $('#getting-an-f99-k00-fellowship').modal('show');
+    }
+    if(window.location.href.indexOf('#superspreader-analysis') != -1) {
+      $('#superspreader-analysis').modal('show');
+    }
+    if(window.location.href.indexOf('#xpressyourself-announcement') != -1) {
+      $('#xpressyourself-announcement').modal('show');
+    }
+    if(window.location.href.indexOf('#heatmaps-explainer') != -1) {
+      $('#heatmaps-explainer').modal('show');
+    }
+  });
+</script>
 
 </html>

@@ -1,5 +1,5 @@
-var local_path = "blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json";
-var online_path = "https://raw.githubusercontent.com/j-berg/j-berg.github.io/main/blog/blog_code/2020-02-12_superspreading/tuberculosis_network.json"
+var local_path = "blog/code/2020-02-12_superspreading/tuberculosis_network.json";
+var online_path = "https://raw.githubusercontent.com/j-berg/j-berg.github.io/main/blog/code/2020-02-12_superspreading/tuberculosis_network.json"
 
 d3.json(online_path).then(data => {
 
