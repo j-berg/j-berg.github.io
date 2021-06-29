@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- jQuery -->
+  <script src="../static/js/jquery-3.2.1.min.js"></script>
+  <script src="../static/js/jquery-migrate-3.0.0.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../static/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="../static/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="../static/plugin/isotope/isotope.pkgd.min.js"></script>
+  <script src="../static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+
+  <!-- custom -->
+  <script src="../static/js/custom.js"></script>
+  <script src="../static/js/mail_send.js"></script>
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QG2TZS458"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QG2TZS458');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Website for Jordan A. Berg, Biochemistry Ph.D. student at the University of Utah">
+  <meta name="keywords" content="Jordan, Berg, Biochemistry, Utah, Computational, Biology, Metabolism">
+  <meta name="author" content="Jordan Berg">
+  <meta name="google-site-verification" content="7R5dCQpyVk7BtHBQhqaXIUbCffeulxE92qqUJDMj7nM" />
+
+  <!---Font Icon-->
+  <link href="../static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="../static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+  <!-- / -->
+
+  <!-- Plugin CSS -->
+  <link href="../static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="../static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+  <!-- / -->
+
+  <!-- Theme Style -->
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <link href="../static/css/color/color-7.css" rel="stylesheet" id="color_theme">
+  <!-- / -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="../static/img/Noun_project_network_icon_1365244_cc.svg" />
+  <!-- / -->
+
+  <!-- Custom Style -->
+  <link href="../static/css/custom.css" rel="stylesheet">
+  <!-- / -->
+
+</head>
+
+<!-- Body Start -->
+
+<body data-spy="scroll" data-target="#navbarRyan" data-offset="98">
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="load-circle"><span class="one"></span></div>
+  </div>
+  <!-- / -->
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar header-nav header-nav-white fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand font-alt" href="index.html">Network Metabolism Group</a>
+        <!-- / -->
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRyan" aria-controls="navbarRyan" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- / -->
+
+        <!-- Top Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarRyan">
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="../index.html">About</a></li>
+            <li><a class="nav-link" href="../research.html">Research</a></li>
+            <li><a class="nav-link" href="../publications.html">Publications</a></li>
+            <li><a class="nav-link" href="../people.html">People</a></li>
+            <li><a class="nav-link" href="../funding.html">Funding</a></li>
+            <li><a class="nav-link" href="../blog.html">Blog</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <!-- / -->
+
+      </div><!-- Container -->
+    </nav> <!-- Navbar -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Page Title -->
+  <script>
+    /* --------------------START EDITING HERE-------------------- */
+    var blog_items = {
+        page: "blog/2020-01-19_introducing-xpressyourself-an-automated-pipeline-for-ribosome-profiling.html",
+        title: "Introducing: XPRESSyourself -- an automated pipeline for ribosome profiling analysis",
+        date: "19 Jan 2020",
+        tags: ["ribosome-profiling", "sequencing", "pipeline"],
+        summary: "A discussion of the software package XPRESSyourself, which introduces new tools for ribosome profiling and acts as a reference pipeline for ribosome profiling data analysis.",
+        entry: ""
+    };
+    /* --------------------STOP EDITING HERE--------------------- */
+
+    window.onload = function () {
+      document.title = blog_items.title;
+      document.getElementById("entry-title").innerHTML = blog_items.title;
+      let this_header = "<h6>" + blog_items.date + " by Jordan Berg</h6>";
+      for (let t in blog_items.tags) {
+        this_header = this_header + 
+          "<a href='../tags.html?" + blog_items.tags[t] + "'><div class='topic-tag'>" + blog_items.tags[t] + "</div></a>";
+      }
+      this_header = this_header +
+        "<blockquote class='custom-blockquote'>" + blog_items.summary + "</blockquote>" +
+        "<br><br>";
+      document.getElementById("entry-header").innerHTML = this_header
+    };
+  </script>
+
+  <!-- / -->
+
+  <!-- Page Content -->
+  <main class="gray-bg">
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="row justify-content-center m-60px-b md-m-30px-b">
+            <div class="section-title text-center">
+                <h2 id="entry-title" class="font-alt"></h2>
+            </div>
+        </div>
+
+        <div class="row md-m-30px-b md-m-10px-r md-m-10px-l">
+          <div id="entry-header"></div>
+          <div id="entry-content">
+            <!-- --------------------START EDITING HERE-------------------- -->
+            <p>* Find the software <a href="https://github.com/XPRESSyourself" target="_blank">here</a>.</p>
+            <p>* Find the publication <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007625" target="_blank">here</a> [1].</p>
+
+            <p>When I began graduate school at the University of Utah, and began considering working in the <a href="http://rutter.biochem.utah.edu/" target="_blank">Rutter lab</a>, Jared proposed a project to me which I found fascinating. He was interested in looking at protein translation using ribosome profilng [2], but in the context of metabolism of interest to the Rutter lab. I was hooked by the idea as it would allow a nice blend of wet lab and dry lab work. However, as I began exploring the data, I quickly found that the analysis side of things still had a lot of room for development, and there was no consensus dry methodology, and I realized that everyone designing their own scripts for processing these data could be problematic as much as it was inefficient. Additionally, key steps of data processing were missing from the open source community. Soon enough, I began thinking of ways I could help solve these issues and began work on <a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a>.</p>
+
+            <br>
+            <h3>What does XPRESSyourself do?</h3>
+
+            <p><a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a>'s goals are three-fold:</p>
+            <p>
+                1) Act as a reference implementation of ribosome profiling data analysis.
+                <br>
+                2) Provide automated tools missing from the ribosome profiling toolkit.
+                <br>
+                3) Where tools exist, help automate the tasks into a well-integrated pipeline.
+            </p>
+            <p><a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a> is designed to require minimal inputs from the user and guide the user through the proper set-up of experimental variables to pass into the packages XPRESSyourself utilizes. XPRESSyourself is split into two packages: <a href="https://xpresspipe.readthedocs.io/en/latest/" target="_blank">XPRESSpipe</a> and <a href="https://xpressplot.readthedocs.io/en/latest/" target="_blank">XPRESSplot</a>. The former handles the processing and quality control of the raw FASTQ sequence files, and the latter handles normalization and analysis of the processed data. While the input requirements are detailed in the documentation and help menus, we tried to make this tool as approachable as possible. Therefore, we designed a sort of "choose your own adventure" style command builder (shown below) to walk the user through every consideration they would need to make for running <a href="https://xpresspipe.readthedocs.io/en/latest/" target="_blank">XPRESSpipe</a>, and <a href="https://github.com/XPRESSyourself/XPRESSplot/blob/main/example_notebook.ipynb" target="_blank">Jupyter Notebook</a> for example analyses for <a href="https://xpressplot.readthedocs.io/en/latest/" target="_blank">XPRESSplot</a>. By centralizing and automating the code needed to process this specialized data type, hopefully, reproducibility will increase and we will be able to extract the maximum amount of data from these labor-intensive and expensive experiments.
+            </p>
+
+            <center>
+                <p><img src="https://j-berg.github.io/blog/code/2020-01-19_XPRESSyourself/xpresspipe_build.png" style="position:relative;border-radius:0px;max-height:500px;"/></p>
+            </center>
+            <p align="center"><i>View of the XPRESSpipe command builder.</i></p>
+            <br>
+            <h3>Adding to the toolkit</h3>
+
+            <p>As mentioned earlier, when I began analyzing my own ribosome profiling data, I began to discover some key tools were missing from the toolkit. The most glaring vacancy in the toolkit centered around removing ribosome profiling-specific biases from the data. As the kinetics of translation initiation and termination are much slower than elongation dynamics [3], which is frequently the of most common interest to users of this technology, initation and termination can often provide a more murky picture of translation dynamics. This effect is further exacerbated by the use of cycloheximide during ribosome footprint harvesting. It is therefore recommended to disregard the first 45 nt and last 15 nt of each transcript, which are suspect to these kinetic consequences [4]. However, no open source tools exist for handling this problem. We decided to handle this issue during quantification of reads using a modified GTF reference file. However, as many transcripts in these records contain short exon 1 sections, often removing the first exon alone is not enough, and uneven truncation can have problematic consequences on quantification between transcripts (see image below). Therefore, we handle this truncation recursively.
+            </p>
+
+            <center>
+            <p><img src="https://j-berg.github.io/blog/code/2020-01-19_XPRESSyourself/truncation_cartoon.png" style="position:relative;border-radius:0px;max-height:400px;"/></p>
+            </center>
+            <p align="center"><i>The consequences of improper trimming.</i></p>
+
+            <p>Other features act to thread together steps of quality control that previously were not fully automated. Metagene read density, intron-specific gene-specific read coverage, read periodicity, and codon distributions are processed for each sample and a publication quality summary PDF is output so the user can quickly view and compare all samples to assess the quality of their ribosome profiling libraries.
+            </p>
+
+            <p>We designed XPRESSyourself to be as flexible as possible. Therefore, in addition to being able to processing ribosome profiling data (and its paired RNA-seq data for translation efficiency calculations), we have used it to analyze single-end RNA-seq, paired-end RNA-seq (we show an example in the supplement where we processed TCGA data), and more sequencing platforms. We have also used XPRESSplot to analyze even proteomics data.
+            </p>
+
+            <br>
+            <h3>Conclusions</h3>
+            <p>Certainly this is only meant to be a quick overview of the capabilities of <a href="https://github.com/XPRESSyourself" target="_blank">XPRESSyourself</a>. If you are interested in learning more about all the capabilities XPRESSyourself has to offer, I would suggest starting with the <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007625" target="_blank">paper</a> and then explore of the <a href="https://github.com/XPRESSyourself" target="_blank">documentation</a> if the tool looks useful to you. If you run into any challenges while using the software, feel free to reach out to me by submitting an <a href="https://github.com/XPRESSyourself/XPRESSpipe/issues" target="_blank">issue</a> on Github. I hope you find this tool useful! Happy analyzing!
+            </p>
+
+            <br>
+            <h3>References</h3>
+
+            1. Berg JA, Belyeu JR, Morgan JT, Ouyang Y, Bott AJ, Quinlan AR, Gertz J, Rutter J. <i>XPRESSyourself</i>: Enhancing, Standardizing, and Automating Ribosome Profiling Computational Analyses Yields Improved Insight into Data. (2020) <b><i>PLoS Comp. Biol.</i></b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <font size="2">
+                <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007625" target="_blank"><i>Publication</i></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </font>
+            <br>
+            <br>
+            2. Ingolia NT, Ghaemmaghami S, Newman JR, Weissman JS. Genome-wide analysis in vivo of translation with nucleotide resolution using ribosome profiling. (2009) Science, 324(5924), 218–223. <a href="https://science.sciencemag.org/content/324/5924/218" target="_blank">doi:10.1126/science.1168978</a>
+            <br>
+            <br>
+            3. Stein KC, Frydman J. The stop-and-go traffic regulating protein biogenesis: How translation kinetics controls proteostasis. (2019) The Journal of biological chemistry, 294(6), 2076–2084. <a href="http://www.jbc.org/content/294/6/2076" target="_blank">doi:10.1074/jbc.REV118.002814</a>
+            <br>
+            <br>
+            4. McGlincy NJ, Ingolia NT. Transcriptome-wide measurement of translation by ribosome profiling. (2017) Methods, 126, 112–129. <a href="https://www.sciencedirect.com/science/article/pii/S1046202316303292" target="_blank">doi:10.1016/j.ymeth.2017.05.028</a>
+            </div>
+
+            <br>
+            <br>
+
+
+
+            <!-- --------------------STOP EDITING HERE--------------------- -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                
+                var disqus_config = function () {  
+                  this.page.url = "https://j-berg.github.io/" + blog_items.page;  // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.title = blog_items.title;
+                };
+          
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://j-berg.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        </div>
+      </div>
+    </div> <!-- blog row -->
+  </div> <!-- Container -->
+  <br>
+  <br>
+  <br>
+  <br>
+</section>
+<!--  Blog End  -->
+</main>
+
+
+<!-- Footer-->
+<footer class="footer">
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <ul class="social-icons">
+        <li><a href="https://twitter.com/jordanberg0" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://scholar.google.com/citations?user=0XsLZ3sAAAAJ&hl=en"><i class="fab fa-google"></i></a></li>
+        <li><a href="https://github.com/j-berg"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">© 2020-2021 Jordan Berg. All Rights Reserved</p>
+</div>
+</footer>
+
+
+</body>
+</html>

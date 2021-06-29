@@ -116,9 +116,9 @@
           <div id="paper-1" class="col-12 m-60px-b md-m-30px-b">
 
             <a href="" class="p-btn" data-toggle="modal" data-target=".paper-1-modal">
-              <h4>Metaboverse: Metabolic network pattern recognition tools contextualize multi-omic data and reveal disease-relevant signatures</h4>
+              <h4>Electrum: Visualization, analysis, and contextualization of protein-metabolite interaction datasets</h4>
             </a>
-            <p class="mb-0">With Youjia Zhou, Yeyun Ouyang, T. Cameron Waller, Sara Nowinski, Tyler Van Ry, Ian George, James Cox, Bei Wang, and Jared Rutter</p>
+            <p class="mb-0">With Ian George, Youjia Zhou, Kevin Hicks, Bei Wang, and Jared Rutter</p>
 
             <!-- paper-1-modal start  -->
             <div class="modal fade paper-1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -130,21 +130,114 @@
                     </button>
 
                     <span class="post-meta"><i class="fa fa-circle" style="color: rgb(15, 97, 165); font-size: 11px;"></i>&nbsp Status: <b>Working Papers</b></span>
-                    <h4 class="modal-title" id="exampleModalScrollableTitle">Metaboverse: Metabolic network pattern recognition tools contextualize multi-omic data and reveal disease-relevant signatures</h4>
+                    <h4 class="modal-title" id="exampleModalScrollableTitle">Electrum: Visualization, analysis, and contextualization of protein-metabolite interaction datasets</h4>
 
                   </div>
                   <div class="modal-body">
                     <h4>Abstract</h4>
                     <p>
-                      Metabolism is a complex biological system, with variable inputs, outputs, and modifiers. The harmony between these factors consequently determines the health and stability of a cell or an organism. Perturbations to any reaction
-                      can have rippling downstream effects, which can be challenging to trace across the total reaction network, particularly when the effects occur between complex interconnected pathways. This problem is further confounded by the
-                      inherent limitations of current metabolomics approaches that garner incomplete datasets within this network. Researchers have primarily utilized reductionist approaches to understand these complicated metabolic reaction systems;
-                      however, these methods often limit the scope of the analysis. Systems-centric omics approaches can also be limited when only a handful of high magnitude signals in the data are prioritized for interpretation. To address these
-                      challenges, we developed Metaboverse, a user-friendly application and introduce algorithms that allow for the rapid and thorough extraction of all regulatory patterns and trends within user data that is overlaid on metabolic and
-                      other reaction networks. We demonstrate the ability of Metaboverse to rapidly extract and distil reliable patterns from multi-omics datasets and demonstrate its ability to reveal novel contextual patterns. Moreover, using
-                      Metaboverse, we identify a putative mechanism by which mitochondrial fatty acid synthesis-impaired yeast respond to decreased citrate levels, a metabolite essential to respiratory growth. We also identify a putative metabolic
-                      regulatory signature in lung adenocarcinomas with implications for patient survival. This framework will be foundational in increasing our ability to holistically interpret and understand metabolic events, perturbations, and
-                      gene-metabolite intra-cooperativity. Metaboverse is freely available under a GPL-3.0 license at <a href="https://github.com/Metaboverse/" target="_blank">https://github.com/Metaboverse/</a>.
+                      <b>Motivation</b>: Metabolic enzymes dictating the biophysical outcomes of cells are controlled by numerous allosteric interactions where a particular metaboliteacts as 
+                      an enzymatic trigger. While various protein-metabolite allosteric interactions have been identified and described, it is difficult and time-consuming todo so. Thus, over 
+                      the course of the last decade, we have developed an at-scale method for the identification of these interactions, which we call “massspectrometry integrated with equilibrium 
+                      dialysis for the discovery of allostery systematically”, or “MIDAS”. The capabilities needed to take sets ofprotein-metabolite interactions and visualize them and identify 
+                      regulatory-relevant patterns within these cohorts has not yet been developed.
+                      <br>
+                      <b>Results</b>: In order to provide a user-friendly web portal for analyzing protein-metabolite interaction data, we developed Electrum. Electrum acts as a centralrepository for 
+                      MIDAS-generated protein-metabolite interaction data and standardizes the database formatting required for storing this data type. Electrumincludes various visual features that 
+                      enable the exploration and analysis of these data. To aid in the biological contextualization of these data, 
+                      we include theability to query these protein-metabolite interactions for biologically relevant information from existing databases, such as the Human Metabolome Databaseand the 
+                      Reactome Knowledgebase. In order to facilitate the identification of regulatory relevant patterns within the data, we built tools that systematicallyquery human metabolism and 
+                      metabolite sub-structures and identify common sub-structures enrichments within metabolites that interact with a given protein.
+                      <!--<img style="padding: 0 25px; float: center;" src="static/img/electrum_overview.png" alt="" width="750" height="330">-->
+                    </p>
+                    <br>
+                    <div class="d-flex flex-row flex-wrap my-flex-container">
+                      <div class="my-flex-item-photo">
+                        <img src="./static/img/User_font_awesome.svg" alt="Ian George photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Ian George</b>
+                      </div>
+
+                      <div class="my-flex-item-photo">
+                        <img src="./static/img/youjia_zhou.jpg" alt="Youjia Zhou photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Youjia Zhou</b>
+                      </div>
+
+                      <div class="my-flex-item-photo">
+                        <img src="./static/img/kevin_hicks.jpg" alt="Kevin Hicks photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Kevin Hicks</b>
+                      </div>
+
+                      <div class="my-flex-item-photo">
+                        <img src="./static/img/bei_wang.jpg" alt="Bei Wang photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Bei Wang</b>
+                      </div>
+                    </div>
+
+                    <br>
+                    <div class="d-flex flex-row flex-wrap my-flex-container">
+                      <div class="my-flex-item-photo">
+                        <img src="./static/img/jared_rutter.jpg" alt="Jared Rutter photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Jared Rutter</b>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    <div align="right">
+                      <a href="https://rutter.chpc.utah.edu/Electrum/" target="_blank" class="m-btn">Software</a>
+                      <a href="https://www.overleaf.com/read/vkwhsfxfgqnd" target="_blank" class="m-btn">Paper</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- paper-1-modal end -->
+          </div>
+          <!-- PAPER 1 END -->
+
+          <!-- PAPER 1 START -->
+          <div id="paper-1" class="col-12 m-60px-b md-m-30px-b">
+
+            <a href="" class="p-btn" data-toggle="modal" data-target=".paper-1-modal">
+              <h4>Network-aware reaction pattern recognition identifies metabolic regulatory signatures</h4>
+            </a>
+            <p class="mb-0">With Youjia Zhou, Yeyun Ouyang, T. Cameron Waller, Ahmad Cluntun, Megan Conway, Tyler Van Ry, Ian George, Sara Nowinski, James Cox, Bei Wang, and Jared Rutter</p>
+
+            <!-- paper-1-modal start  -->
+            <div class="modal fade paper-1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <span class="post-meta"><i class="fa fa-circle" style="color: rgb(15, 97, 165); font-size: 11px;"></i>&nbsp Status: <b>Working Papers</b></span>
+                    <h4 class="modal-title" id="exampleModalScrollableTitle">Network-aware reaction pattern recognition identifies metabolic regulatory signatures</h4>
+
+                  </div>
+                  <div class="modal-body">
+                    <h4>Abstract</h4>
+                    <p>
+                      Metabolism forms a complex network, and perturbations to any reaction can have rippling downstream effects.Contextualizing these outcomes is difficult, 
+                      particularly when the effects occur between complex interconnected pathways.This problem is further compounded by limitations of current metabolomics 
+                      approaches that garner incomplete datasets.Reductionist and systems-centric methods alike can be scope limiting as they tend to prioritize high-magnitude 
+                      signals. Weintroduce algorithms that allow for the rapid and thorough network-aware extraction of regulatory patterns and trends withinuser data. To address 
+                      missing measurements within the metabolic network, we introduce methods for generating collapsedreaction representations that enable complex pattern 
+                      recognition across multiple reactions. These tools are availableinteractively within Metaboverse, facilitating data exploration and the generation of 
+                      data-driven hypotheses. UsingMetaboverse, we show that known multi-component signals of metabolism are captured by Metaboverse. We also identifyrelevant 
+                      and previously undescribed regulatory patterns that shed new light on their respective biological models.
                       <img style="padding: 0 25px; float: center;" src="static/img/metaboverse_overview.png" alt="" width="750" height="330">
                     </p>
                     <br>
@@ -171,15 +264,22 @@
                       </div>
 
                       <div class="my-flex-item-photo">
-                        <img src="./static/img/sara_nowinski.jpg" alt="Sara Nowinski photo">
+                        <img src="./static/img/User_font_awesome.svg" alt="Ahmad Cluntun photo">
                       </div>
                       <div class="p-2 my-flex-item-photo-txt">
-                        <b>Sara Nowinski</b>
+                        <b>Ahmad Cluntun</b>
                       </div>
                     </div>
 
                     <br>
                     <div class="d-flex flex-row flex-wrap my-flex-container">
+                      <div class="my-flex-item-photo">
+                        <img src="./static/img/User_font_awesome.svg" alt="Megan Conway photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Megan Conway</b>
+                      </div>
+
                       <div class="my-flex-item-photo">
                         <img src="./static/img/User_font_awesome.svg" alt="Tyler Van Ry photo">
                       </div>
@@ -195,6 +295,17 @@
                       </div>
 
                       <div class="my-flex-item-photo">
+                        <img src="./static/img/sara_nowinski.jpg" alt="Sara Nowinski photo">
+                      </div>
+                      <div class="p-2 my-flex-item-photo-txt">
+                        <b>Sara Nowinski</b>
+                      </div>
+                    </div>
+
+                    <br>
+                    <div class="d-flex flex-row flex-wrap my-flex-container">
+                      
+                      <div class="my-flex-item-photo">
                         <img src="./static/img/james_cox.jpg" alt="James Cox photo">
                       </div>
                       <div class="p-2 my-flex-item-photo-txt">
@@ -207,10 +318,7 @@
                       <div class="p-2 my-flex-item-photo-txt">
                         <b>Bei Wang</b>
                       </div>
-                    </div>
-
-                    <br>
-                    <div class="d-flex flex-row flex-wrap my-flex-container">
+   
                       <div class="my-flex-item-photo">
                         <img src="./static/img/jared_rutter.jpg" alt="Jared Rutter photo">
                       </div>

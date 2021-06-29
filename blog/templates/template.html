@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- jQuery -->
+  <script src="../static/js/jquery-3.2.1.min.js"></script>
+  <script src="../static/js/jquery-migrate-3.0.0.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../static/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="../static/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="../static/plugin/isotope/isotope.pkgd.min.js"></script>
+  <script src="../static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+
+  <!-- custom -->
+  <script src="../static/js/custom.js"></script>
+  <script src="../static/js/mail_send.js"></script>
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QG2TZS458"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QG2TZS458');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Website for Jordan A. Berg, Biochemistry Ph.D. student at the University of Utah">
+  <meta name="keywords" content="Jordan, Berg, Biochemistry, Utah, Computational, Biology, Metabolism">
+  <meta name="author" content="Jordan Berg">
+  <meta name="google-site-verification" content="7R5dCQpyVk7BtHBQhqaXIUbCffeulxE92qqUJDMj7nM" />
+
+  <!---Font Icon-->
+  <link href="../static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="../static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+  <!-- / -->
+
+  <!-- Plugin CSS -->
+  <link href="../static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="../static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+  <!-- / -->
+
+  <!-- Theme Style -->
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <link href="../static/css/color/color-7.css" rel="stylesheet" id="color_theme">
+  <!-- / -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="../static/img/Noun_project_network_icon_1365244_cc.svg" />
+  <!-- / -->
+
+  <!-- Custom Style -->
+  <link href="../static/css/custom.css" rel="stylesheet">
+  <!-- / -->
+
+</head>
+
+<!-- Body Start -->
+
+<body data-spy="scroll" data-target="#navbarRyan" data-offset="98">
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="load-circle"><span class="one"></span></div>
+  </div>
+  <!-- / -->
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar header-nav header-nav-white fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand font-alt" href="index.html">Network Metabolism Group</a>
+        <!-- / -->
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRyan" aria-controls="navbarRyan" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- / -->
+
+        <!-- Top Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarRyan">
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="../index.html">About</a></li>
+            <li><a class="nav-link" href="../research.html">Research</a></li>
+            <li><a class="nav-link" href="../publications.html">Publications</a></li>
+            <li><a class="nav-link" href="../people.html">People</a></li>
+            <li><a class="nav-link" href="../funding.html">Funding</a></li>
+            <li><a class="nav-link" href="../blog.html">Blog</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <!-- / -->
+
+      </div><!-- Container -->
+    </nav> <!-- Navbar -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Page Title -->
+  <script>
+    /* --------------------START EDITING HERE-------------------- */
+    var blog_items = {};
+    /* --------------------STOP EDITING HERE--------------------- */
+
+    window.onload = function () {
+      document.title = blog_items.title;
+      document.getElementById("entry-title").innerHTML = blog_items.title;
+      let this_header = "<h6>" + blog_items.date + " by Jordan Berg</h6>";
+      for (let t in blog_items.tags) {
+        this_header = this_header + 
+          "<a href='../tags.html?" + blog_items.tags[t] + "'><div class='topic-tag'>" + blog_items.tags[t] + "</div></a>";
+      }
+      this_header = this_header +
+        "<blockquote class='custom-blockquote'>" + blog_items.summary + "</blockquote>" +
+        "<br><br>";
+      document.getElementById("entry-header").innerHTML = this_header
+    };
+  </script>
+
+  <!-- / -->
+
+  <!-- Page Content -->
+  <main class="gray-bg">
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="row justify-content-center m-60px-b md-m-30px-b">
+            <div class="section-title text-center">
+                <h2 id="entry-title" class="font-alt"></h2>
+            </div>
+        </div>
+
+        <div class="row md-m-30px-b md-m-10px-r md-m-10px-l">
+          <div id="entry-header"></div>
+          <div id="entry-content">
+            <!-- --------------------START EDITING HERE-------------------- -->
+
+
+
+
+            <!-- --------------------STOP EDITING HERE--------------------- -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                
+                var disqus_config = function () {  
+                  this.page.url = "https://j-berg.github.io/" + blog_items.page;  // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.title = blog_items.title;
+                };
+          
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://j-berg.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        </div>
+      </div>
+    </div> <!-- blog row -->
+  </div> <!-- Container -->
+  <br>
+  <br>
+  <br>
+  <br>
+</section>
+<!--  Blog End  -->
+</main>
+
+
+<!-- Footer-->
+<footer class="footer">
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <ul class="social-icons">
+        <li><a href="https://twitter.com/jordanberg0" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://scholar.google.com/citations?user=0XsLZ3sAAAAJ&hl=en"><i class="fab fa-google"></i></a></li>
+        <li><a href="https://github.com/j-berg"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">© 2020-2021 Jordan Berg. All Rights Reserved</p>
+</div>
+</footer>
+
+
+</body>
+</html>
