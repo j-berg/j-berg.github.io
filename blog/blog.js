@@ -4,13 +4,26 @@
 
 // Read in html files in blog folder ending with .html 
 var entries = {
+    // Pinned pages 📌
+    blog100: {
+        page: "blog/2021-07-01_My-reading-list-2021.html",
+        title: "My reading list (2021)",
+        date: "Updated on a continuous basis",
+        tags: ["papers", "2021", "network", "metabolism", "statistics", "job-market"],
+        summary: "Noteworthy papers I have come across during 2021.",
+        entry: "",
+        pinned: true
+    },
+
+    // Other blog pages
     blog3: {
         page: "blog/2021-06-14_Getting-an-F99-K00-Fellowship.html",
         title: "Getting an F99/K00 Fellowship",
         date: "14 Jun 2021",
         tags: ["F99", "K00", "fellowship"],
         summary: "My tips and tricks for the F99/K00 fellowship (whatever they're worth).",
-        entry: ""
+        entry: "",
+        pinned: false
     },
     blog2: {
         page: "blog/2020-02-14_interactive-article-exploration-previously-undetected-super-spreading.html",
@@ -18,7 +31,8 @@ var entries = {
         date: "14 Feb 2020",
         tags: ["network", "super-spreader", "outbreak"],
         summary: "A re-visualization of infection spread in a tuberculosis community outbreak.",
-        entry: ""
+        entry: "",
+        pinned: false
     },
     blog1: {
         page: "blog/2020-01-19_introducing-xpressyourself-an-automated-pipeline-for-ribosome-profiling.html",
@@ -26,7 +40,8 @@ var entries = {
         date: "19 Jan 2020",
         tags: ["ribosome-profiling", "sequencing", "pipeline"],
         summary: "A discussion of the software package XPRESSyourself, which introduces new tools for ribosome profiling and acts as a reference pipeline for ribosome profiling data analysis.",
-        entry: ""
+        entry: "",
+        pinned: false
     },
     blog0: {
         page: "blog/2019-04-09_understanding-scaling-in-heatmaps.html",
@@ -34,18 +49,52 @@ var entries = {
         date: "09 Apr 2019",
         tags: ["heatmaps", "scaling"],
         summary: "A brief summary of the utility of plotting heatmaps using z-scored gene expression values in pattern identification.",
-        entry: ""
+        entry: "",
+        pinned: false
     }
 };
 
 // populate blog-space div 
 function populate_entry(entries) {
     var populate = "";
+
+    // add tags at top of page 
+    var tags = new Set();
+    for (let e in entries) {
+        for (let t in entries[e].tags) {
+            tags.add(entries[e].tags[t]);
+        }
+    }
+
+    populate = populate +
+        "<center>";
+
+    var counter = 0;
+    tags.forEach( function (t) {
+        populate = populate + 
+            "<a href='tags.html?" + t + "'><div class='topic-tag'>" + t + "</div></a>";
+        counter++;
+        if (counter % 5 === 0) {
+            populate = populate + 
+                "<br><br>";
+        }
+    });
+
+    populate = populate +
+        "</center><br><hr><br>";
+
+    // populate blog entries 
     for (let e in entries) {
         let this_entry = "";
-    
-        this_entry = this_entry + 
-            "<h6>" + entries[e].date + "</h6>"
+        
+        if (entries[e].pinned === true) {
+            this_entry = this_entry + 
+                "<h6>📌 " + entries[e].date + "</h6>"
+        } else {
+            this_entry = this_entry + 
+                "<h6>" + entries[e].date + "</h6>"
+        }
+        
         for (let t in entries[e].tags) {
             this_entry = this_entry + 
                 "<a href='tags.html?" + entries[e].tags[t] + "'><div class='topic-tag'>" + entries[e].tags[t] + "</div></a>";
@@ -55,7 +104,12 @@ function populate_entry(entries) {
         this_entry = this_entry +
             "<a href='" + entries[e].page + "'><h4>" + entries[e].title + "</h4></a>" +
             "<blockquote class='custom-blockquote'>" + entries[e].summary + "</blockquote>" +
-            "<br><br>";
+            "<br><br><br>";
+        
+        if (entries[e].pinned === true) {
+            this_entry = this_entry +
+                "<br><br>";
+        }
         
         populate = populate + this_entry;
     }
