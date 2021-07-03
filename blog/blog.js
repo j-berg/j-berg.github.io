@@ -17,9 +17,9 @@ var entries = {
 
     // Other blog pages
     blog3: {
-        page: "blog/2021-06-14_Getting-an-F99-K00-Fellowship.html",
+        page: "blog/2021-07-03_Getting-an-F99-K00-Fellowship.html",
         title: "Getting an F99/K00 Fellowship",
-        date: "14 Jun 2021",
+        date: "03 Jul 2021",
         tags: ["F99", "K00", "fellowship"],
         summary: "My tips and tricks for the F99/K00 fellowship (whatever they're worth).",
         entry: "",
