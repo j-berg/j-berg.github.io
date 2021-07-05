@@ -112,6 +112,7 @@
   <!-- Header End -->
 
   <!-- Page Title -->
+  <script src="blog.js"></script>
   <script>
     /* --------------------START EDITING HERE-------------------- */
     var blog_items = {
@@ -123,19 +124,8 @@
         entry: ""
     };
     /* --------------------STOP EDITING HERE--------------------- */
-
     window.onload = function () {
-      document.title = blog_items.title;
-      document.getElementById("entry-title").innerHTML = blog_items.title;
-      let this_header = "<h6>" + blog_items.date + " by Jordan Berg</h6>";
-      for (let t in blog_items.tags) {
-        this_header = this_header + 
-          "<a href='../tags.html?" + blog_items.tags[t] + "'><div class='topic-tag'>" + blog_items.tags[t] + "</div></a>";
-      }
-      this_header = this_header +
-        "<blockquote class='custom-blockquote'>" + blog_items.summary + "</blockquote>" +
-        "<br><br>";
-      document.getElementById("entry-header").innerHTML = this_header
+      make_header(blog_items);
     };
   </script>
 

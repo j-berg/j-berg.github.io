@@ -147,6 +147,32 @@ function add_tags(entries, this_tag) {
     document.getElementById("tag-space").innerHTML = populate;
 }
 
+function readingTime() {
+    const text = document.getElementById("entry-content").innerText;
+    const wpm = 225;
+    const words = text.trim().split(/\s+/).length;
+    const time = Math.ceil(words / wpm);
+    document.getElementById("time").innerText = time;
+}
+
+function make_header(blog_items) {
+    document.title = blog_items.title;
+    document.getElementById("entry-title").innerHTML = blog_items.title;
+    let this_header = "";
+    this_header = this_header + 
+    "<p><h6>" + blog_items.date + " by Jordan Berg  &#8226; <span id='time'></span> min read</h6>";
+    for (let t in blog_items.tags) {
+        this_header = this_header + 
+            "<a href='../tags.html?" + blog_items.tags[t] + "'><div class='topic-tag'>" + blog_items.tags[t] + "</div></a>";
+    }
+    this_header = this_header + "</p>";
+    this_header = this_header +
+    "<blockquote class='custom-blockquote'>" + blog_items.summary + "</blockquote>" +
+    "<br><br>";
+    document.getElementById("entry-header").innerHTML = this_header
+    readingTime();
+}
+
 window.onload = function () {
     var path = window.location.pathname;
     var page = path.split("/").pop();
