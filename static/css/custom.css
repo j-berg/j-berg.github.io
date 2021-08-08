@@ -20,13 +20,18 @@ blockquote.indented {
 
 h6 {display: inline-block;}
 
+.tag-space {
+    width: 60vw;
+}
+
 .topic-tag {
     color: grey;
     font: 14px/22px normal helvetica, sans-serif;
+    margin-bottom: 10px;
     margin-left: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    border-radius: 5px;
+    border-radius: 5px; 
     border: 1px solid grey;
     display: inline-block;
 }

@@ -67,7 +67,7 @@ function populate_entry(entries) {
     }
 
     populate = populate +
-        "<center>";
+        "<center><div class='tag-space'>";
 
     var counter = 0;
     tags.forEach( function (t) {
@@ -75,13 +75,13 @@ function populate_entry(entries) {
             "<a href='tags.html?" + t + "'><div class='topic-tag'>" + t + "</div></a>";
         counter++;
         if (counter % 5 === 0) {
-            populate = populate + 
-                "<br><br>";
+            //populate = populate + 
+            //    "<br><br>";
         }
     });
 
     populate = populate +
-        "</center><br><hr><br>";
+        "</div></center><br><hr><br>";
 
     // populate blog entries 
     for (let e in entries) {
@@ -108,7 +108,7 @@ function populate_entry(entries) {
         
         if (entries[e].pinned === true) {
             this_entry = this_entry +
-                "<br><br>";
+                "<br>";
         }
         
         populate = populate + this_entry;

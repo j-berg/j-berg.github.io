@@ -228,6 +228,7 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
   color: #666666;
+  background-color: #111;
 }
 
 img {
@@ -250,7 +251,7 @@ img {
 
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: "Noto Sans SC", sans-serif; */
+  /* font-family: "Noto Sans SC", sans-serif; */ 
 }
 
 
@@ -373,6 +374,7 @@ a:hover {
 * 04. Buttons
 -----------------------------------------*/
 .m-btn {
+  margin-bottom: 10px;
   height: 45px;
   border-radius: 30px;
   font-weight: 600;
@@ -716,9 +718,10 @@ a.m-btn {
 
 .home-about {
   color: white;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 15%;
+  padding-bottom: 15%;
   z-index: 1;
   height: 70vh;
 }
@@ -991,7 +994,7 @@ a.m-btn {
 }
 
 .home-banner-04 .home-text-center {
-  padding: 5%;
+  padding: 3%;
   /*margin-left: -60px;
   background: #fff;
   display: inline-block;
@@ -1506,7 +1509,8 @@ section#portfolio {
 }
 
 .my-flex-item-utah {
-  width: 30vw;
+
+  width: 100%;
   background-color: transparent;
 }
 
@@ -1981,7 +1985,6 @@ blockquote.blockquote-left .parson { font-weight: 600; }
 .footer {
   background: #111;
   padding: 40px 0 40px;
-  padding-bottom: 160px;
   text-align: center;
   position: relative;
 }
