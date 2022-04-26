@@ -53,7 +53,7 @@ Table of contents
 }
 
 .icon-span {
-  height: 40vh;
+  height: 5vh;
 }
 
 
@@ -720,10 +720,8 @@ a.m-btn {
   color: white;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 15%;
-  padding-bottom: 15%;
-  z-index: 1;
-  height: 70vh;
+  padding-top: 10%;
+  z-index: 9;
 }
 
 .home-banner {
